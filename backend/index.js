@@ -1,16 +1,18 @@
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
-
 const app = express();
 
+require('dotenv').config();
+
 const SELECT_ALL_POST = 'SELECT * FROM anonpost';
+const PORT = process.env.NODE_PORT;
 
 const connection = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'posts'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE
 });
 
 
@@ -49,6 +51,6 @@ app.get('/posts',(req, res) => {
 });
 
 
-app.listen(5000, () => {
-  console.log('Posts server listening on port 5000');
+app.listen(PORT, () => {
+  console.log(`Posts server listening on port ${PORT}`);
 });
