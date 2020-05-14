@@ -5,7 +5,7 @@ const app = express();
 
 require('dotenv').config();
 
-const SELECT_ALL_POST = 'SELECT * FROM anonpost';
+const SELECT_ALL_POST = 'SELECT * FROM post';
 const PORT = process.env.NODE_PORT;
 
 const connection = mysql.createPool({
@@ -15,11 +15,10 @@ const connection = mysql.createPool({
   database: process.env.DB_DATABASE
 });
 
-
 app.use(cors());
 
 app.get('/',(req, res) => {
-res.send('go to /posts to see posts')
+	res.send('go to /posts to see posts')
 });
 
 app.get('/posts/add', (req, res) => {
@@ -49,7 +48,6 @@ app.get('/posts',(req, res) => {
     }
   });
 });
-
 
 app.listen(PORT, () => {
   console.log(`Posts server listening on port ${PORT}`);

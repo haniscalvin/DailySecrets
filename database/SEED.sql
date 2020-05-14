@@ -3,7 +3,7 @@ INSERT INTO post (
 	post_content, 
 	created_by, 
 	created_at, 
-	modify_at, 
+	modify_at 
 )
 VALUES (
 	'Feeling loved',
@@ -11,14 +11,14 @@ VALUES (
 	1,
 	'2020-04-05 10:50:00',
 	'2020-04-05 10:50:00'
-)
+);
 
 INSERT INTO post (
 	post_title, 
 	post_content, 
 	created_by, 
 	created_at, 
-	modify_at, 
+	modify_at 
 )
 VALUES (
 	'Grow Up',
@@ -26,22 +26,22 @@ VALUES (
 	3,
 	'2020-04-05 10:50:00',
 	'2020-04-05 10:50:00'
-)
+);
 
 INSERT INTO post (
 	post_title, 
 	post_content, 
 	created_by, 
 	created_at, 
-	modify_at, 
+	modify_at 
 )
 VALUES (
-	'Feeling loved',
-	"I Don't know how to thank you or how to ever help you this much in return, but if you're reading this: THANK YOU",
+	'Feeling Lucky',
+	'The only good luck many great men ever had was being born with the ability and determination to overcome bad luck',
 	1,
 	'2020-04-05 10:50:00',
 	'2020-04-05 10:50:00'
-)
+);
 
 INSERT INTO user_account (
 	display_name,
